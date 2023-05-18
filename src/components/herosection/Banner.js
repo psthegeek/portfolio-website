@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import {ArrowRightCircle} from "react-bootstrap-icons"
-import headerImg from '../assets/img/img-104.png'
+import headerImg from '../../assets/img/img-104.png'
+import './banner.css'
 
 
 const Banner = () => {
@@ -52,8 +53,8 @@ const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className='tagline'>Welcome to my Portfolio</span>
                         <h1>{`Hi I am Preeti Singh `}<span className='wrap '>{text}</span></h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, eos animi. Saepe, blanditiis praesentium mollitia dolores fugit quaerat debitis temporibus?</p>
-                        <button onClick={()=>console.log('connect')}> Let's Connect</button>
+                        <p>Welcome to my Portfolio. I am a full stack developer. An enthusiastic and motivated individual who wants to explore the new areas and work in a dynamic stable organization.</p>
+                        <button onClick={()=>console.log('connect')}className='get-resume-btn'> GET RESUME</button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"/>
