@@ -1,31 +1,26 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import {ArrowRightCircle} from "react-bootstrap-icons"
+// import {ArrowRightCircle} from "react-bootstrap-icons"
 import headerImg from '../../assets/img/img-104.png'
 import './banner.css'
+
 
 
 const Banner = () => {
 
     const [loopnum, setLoopNum] = useState(0);
     const[isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ['Web Developer', "Web Designer"] ;
     const [text, setText] = useState('')
     const [delta, setDelta] = useState(300 - Math.random() * 100)
     const period = 2000;
-
-    //Responsible for typing and deleting
-    useEffect(()=>{
-        let ticker = setInterval(()=>{
-            tick();
-        },delta)
-
-        return () => {clearInterval(ticker)};
-    }, [text])
+    const toRotate = ['Web Developer', "Web Designer"] ;
+    const tempRefFunc = useRef();
 
     const tick = () =>{
+        
         let i = loopnum % toRotate.length;
         let fullText = toRotate[i];
+
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
 
         setText(updatedText);
@@ -45,6 +40,26 @@ const Banner = () => {
         }
     }
 
+    const rotateFunc = () => {
+        let ticker =  setInterval(()=>{
+            tick();
+        },delta)
+
+        return () => {clearInterval(ticker)};
+    }
+
+    tempRefFunc.current = rotateFunc
+
+    //Responsible for typing and deleting
+    useEffect(()=>{
+       
+       tempRefFunc.current()
+    },[])
+
+
+    
+
+    
   return (
     <>
         <section className='banner' id="home">
