@@ -9,6 +9,8 @@ import { init } from "ityped";
 
 const Banner = () => {
 
+    const url = "https://drive.google.com/drive/u/1/my-drive"
+
     const textRef = useRef();
     useEffect(() => {
         init(textRef.current, {
@@ -29,7 +31,8 @@ const Banner = () => {
                         <h1>{`Hi I am Preeti Singh `}</h1>
                         <h3>Web <span ref={textRef}></span></h3>
                         <p>Welcome to my Portfolio. I am an enthusiastic and motivated individual who wants to explore the new areas and work in a dynamic stable organization.</p>
-                        <button onClick={()=>console.log('connect')}className='get-resume-btn'> GET RESUME</button>
+                      
+                             <button onClick={() => { window.location.href = url; } } className='get-resume-btn'> GET RESUME</button> 
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"/>
