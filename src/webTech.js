@@ -32,6 +32,14 @@ const webTech = [
             title: "Linux",
             imgUrl: '/images/linux.svg',
           },
+          {
+            title: "Git",
+            imgUrl: '/images/git.svg',
+          },
+          {
+            title: "VS-Code",
+            imgUrl: '/images/vs.svg',
+          },
     
   
 ];
