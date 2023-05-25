@@ -4,7 +4,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import ProjectCard from './ProjectCard'
 import './projects.css'
-import majors from '../../majors' 
+import {majors} from '../../minors' 
 import minors from '../../minors' 
 
 const Projects = () => {
@@ -18,8 +18,8 @@ const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>RECENTLY CREATED PROJECTS - QUALITY WORK</p>
+                <h1>My <span>Creative</span> Portfolio Section</h1>
+                <p>RECENTLY CREATED PROJECTS</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>

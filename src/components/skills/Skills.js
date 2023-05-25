@@ -1,10 +1,12 @@
-import meter1 from "../../assets/img/meter1.svg";
-import meter2 from "../../assets/img/meter2.svg";
-import meter3 from "../../assets/img/meter3.svg";
+// import meter1 from "../../assets/img/meter1.svg";
+// import meter2 from "../../assets/img/meter2.svg";
+// import meter3 from "../../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../../assets/img/color-sharp.png"
+// import bg104 from "../../assets/img/bg-104.jpg"
 import './skills.css'
+import webTech from '../../webTech' 
+import progLang from '../../progLang';
 
 
 const Skills = () => {
@@ -12,7 +14,7 @@ const Skills = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 3
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -20,7 +22,7 @@ const Skills = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2
+      items: 1
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -30,74 +32,74 @@ const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
             <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <div style={{display:"flex"}}>
-                            <h4>Experience: </h4>&nbsp;<p> HTML, CSS, ReactJS</p>
-                        </div>
-                        <div style={{display:"flex"}}>
-                             <h4>Knowledge: </h4>&nbsp;<p> Nodejs, Python</p>
-                        </div>
-                        
+                        <h2>Skills And <span>Experience</span></h2>
+                        <div className="col-6 skill-bx">
+                                <div className="item-group">
+                                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider ">
+                                        {
+                                            webTech.map((data,index)=>{
+                                                return(
+                                                    <>
+                                                        <div className="item">
+                                                            <img src={data.imgUrl} alt="" />
+                                                            <h5>{data.title}</h5>
+                                                        </div>
+                                    
+                                                    
+                                                    </>
+                                                
+                                                )
+                                            })
 
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider ">
-                            <div className="item">
-                                <img src={meter3} alt="" />
-                                <h5>ReactJS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>NodeJs</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>Python</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="" />
-                                <h5>HTML/CSS/JS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>GIT</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>SASS</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>Linux</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>MongoDB</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>MySql</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>C</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>Django</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="" />
-                                <h5>Flask</h5>
-                            </div>
-                        </Carousel>
+                                        }           
+                                    </Carousel>
+                                    <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider ">
+                                        {
+                                            progLang.map((data,index)=>{
+                                                return(
+                                                    <>
+                                                        <div className="item">
+                                                            <img src={data.imgUrl} alt="" />
+                                                            <h5>{data.title}</h5>
+                                                        </div>
+                                    
+                                                    
+                                                    </>
+                                                
+                                                )
+                                            })
+
+                                        }           
+                                    </Carousel>
+
+                                </div>
+                               
+                        </div>
+                        <div className="col-6">
+                                <div className="experience">
+                                    <h5>2022-23</h5>
+                                    <div className="profile-company">
+                                        <p className="profile">Front End Developer Intern</p>
+                                        <p className="company">Highbreed Development India Pvt. Ltd.</p>
+                                     </div>  
+                                </div>
+                                <br/>
+                                <div className="roles">
+                                        <h4>Roles and Responsibilities:</h4>
+                                            <li>Worked on Company’s v2 website and optimized code by improving code reusability</li>
+                                            <li>Worked with Senior Developer to write code from scratch for clients</li>
+                                            <li>Worked with Back-End Developer to edit existing projects</li>
+                                            <li>Have worked with web debugging tools like Chrome Developer Console</li>
+                                            <li>Learned how to minify the code – CSS and JS</li>   
+                                            <li>Fixed bugs of platform of the website and worked on various areas of software product development</li>
+                                            <li>Assist team with testing code in multiple browsers</li>
+                                </div>
+                               
+                            
+                        </div>
+                       
                     </div>
-                </div>
-            </div>
-        </div>
-        <img className="background-image-left" src={colorSharp} alt="" />
     </section>
   )
 }

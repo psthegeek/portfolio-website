@@ -16,7 +16,7 @@ const Footer = () => {
             <img src={logo} alt="Logo" />
           </Col>
           <Col size={12} sm={4}>
-             <p>Copyright &copy; 2023. All Rights Reserved</p>
+             <p>Copyright&copy;2023 Preeti All Rights Reserved</p>
           </Col>
           <Col size={12} sm={4} >
           <div className="social-icon">

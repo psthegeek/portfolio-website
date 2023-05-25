@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom";
 import Projects from './components/projects/Projects'
@@ -13,6 +13,7 @@ function App() {
           <Routes>
              <Route path="projects" element={<Projects />} />
           </Routes>
+
     </>
         
 

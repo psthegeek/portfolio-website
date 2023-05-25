@@ -5,16 +5,24 @@ import Skills from '../skills/Skills'
 import Projects from '../projects/Projects'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
+import './home.scss'
+import About from '../about/About';
+// import Portfolio from '../portfolio/Portfolio'
 
 const Home = () => {
   return (
     <>
-          <MyNavbar/>
-          <Banner/>
+        <div className="home">
+           <MyNavbar/>
+        <div className="sections">
+           <Banner/>
+           <About/>
           <Skills/>
           <Projects/>
           <Contact/>
           <Footer/>
+        </div>  
+        </div>    
 
     </>
   )
