@@ -1,5 +1,5 @@
 import "./about.scss";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import Certificate from "../certificate/Certificate";
 
 const About = () => {
