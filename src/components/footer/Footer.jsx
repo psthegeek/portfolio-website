@@ -4,7 +4,7 @@ import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon4 from '../../assets/img/nav-icon4.svg';
 import navIcon3 from '../../assets/img/nav-icon3.svg';
 import {Link} from 'react-router-dom'
-import './footer.css'
+import './footer.scss'
 
 const Footer = () => {
     
@@ -12,14 +12,14 @@ const Footer = () => {
     <footer className="footer" >
       <Container>
         <Row className="align-items-center" >
-          <Col size={12} sm={4}>
+          <Col xl={4} md={4} sm={12} xs={12}>
             <img src={logo} alt="Logo" />
           </Col>
-          <Col size={12} sm={4}>
-             <p>Copyright&copy;2023 Preeti All Rights Reserved</p>
+          <Col xl={4} md={4} sm={12} xs={12}>
+            <p>Copyright&copy;2023 Preeti All Rights Reserved</p>
           </Col>
-          <Col size={12} sm={4} >
-          <div className="social-icon">
+          <Col xl={4} md={4} sm={12} xs={12}>
+            <div className="social-icon">
                 <Link to="https://www.linkedin.com/in/preeti-singh-a1b63b149/" className="icon">
                     <img src={navIcon1} alt="" />
                 </Link>
@@ -32,6 +32,7 @@ const Footer = () => {
                 
               </div>
           </Col>
+            
         </Row>
       </Container>
     </footer>

@@ -13,6 +13,9 @@ const majors = [{
     title: "Admin Panel",
     description: "ReactJS & MaterialUI",
     imgUrl: '/images/major1.png',
+    deployUrl:'https://psthegeek-myadmin.netlify.app/',
+    gitUrl:'https://github.com/psthegeek/myAdmin_reactjs',
+
   },
   {
     title: "Netflix-Clone",

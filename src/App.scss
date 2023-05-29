@@ -33,6 +33,7 @@
 --brown-color: #46364a;
 --white-color: #fff;
 --yellow-color: #e6b400;
+--pink-color: #F48FB1;
 
 }
 
@@ -40,9 +41,12 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
   scroll-snap-align: start;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
+  max-width: 100%;
   font-weight: 400;
   overflow-x: hidden;
   position: relative;

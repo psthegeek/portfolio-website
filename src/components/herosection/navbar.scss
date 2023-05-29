@@ -9,8 +9,34 @@ nav.navbar {
     transition:  0.32s ease-in-out;
     transition:  all 1s ease;
   }
+
+  .collapse-navbar{
+
+    @media screen and (max-width: 540px) {
+
+        text-align: right;
+        position: relative;  
+
+        .thelogo{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 30%;
+        }
+
+        .navbar-text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;       
+        }
+      
+    }
+        
+  }
+
   nav.navbar.scrolled {
-    padding: 0px 0;
+    padding: 10px 0;
     /* background-color: #121212; */
     /* background-color: #000620; */
     background-color: #000839;
@@ -25,10 +51,16 @@ nav.navbar {
     padding: 0 25px;
     font-size: 16px;
     opacity: 0.75;
+
+    @media only screen and (min-width: 768px) and (max-width: 992px){
+      font-size: 14px;
+      padding: 0px 19px;
+    }
   }
   nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
   nav.navbar .navbar-nav a.nav-link.navbar-link.active {
       opacity: 1;
+      
   }
   span.navbar-text {
       display: flex;
@@ -37,6 +69,10 @@ nav.navbar {
   
   .thelogo{
     width: calc(100% + 70px);
+
+    @media only screen and (min-width: 768px) and (max-width: 992px){
+      width: calc(100% + 27px);
+    }
   }
   .social-icon {
       display: inline-block;
@@ -53,6 +89,13 @@ nav.navbar {
       justify-content: center;
       line-height: 1;
       border: 1px solid rgba(255, 255, 255, 0.5);
+
+      
+      @media only screen and (min-width: 768px) and (max-width: 992px){
+          width: 42px;
+          height: 33px;
+          margin-right: 2px;;
+      }
   }
   .social-icon .icon::before {
       content: "";
@@ -63,6 +106,12 @@ nav.navbar {
       border-radius: 50%;
       transform: scale(0);
       transition: 0.3s ease-in-out;
+
+      
+      @media only screen and (min-width: 768px) and (max-width: 992px){
+        width: 42px;
+        height: 33px;
+      }
   }
   .social-icon .icon:hover::before {
       transform: scale(1);
@@ -71,6 +120,8 @@ nav.navbar {
       width: 40%;
       z-index: 1;
       transition: 0.3s ease-in-out;
+
+     
   }
   .social-icon .icon:hover img {
       filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
@@ -84,7 +135,15 @@ nav.navbar {
     margin-left: 18px;
       position: relative;
       background-color: transparent;
+    //   background-color: pink;
       transition: 0.3s ease-in-out;
+
+      
+      @media only screen and (min-width: 768px) and (max-width: 992px){
+        padding: 5px 30px;
+        font-size: 13px;
+        margin-left: 3px;
+      }
   }
   .navbar-text button span {
     z-index: 1;
@@ -108,11 +167,13 @@ nav.navbar {
       width: 100%;
       height: 100%;
       position: absolute;
+      
   }
   nav.navbar .navbar-toggler:active,
   nav.navbar .navbar-toggler:focus {
       outline: none;
       box-shadow: none;
+     
   }
   nav.navbar .navbar-toggler-icon {
     width: 24px;
@@ -122,9 +183,11 @@ nav.navbar {
     border-bottom: 2px solid #fff;
     transition: all 300ms linear;
     top: -2px;
+
   }
   nav.navbar .navbar-toggler-icon:focus {
       border-bottom: 2px solid #fff;
+      
   }
   nav.navbar .navbar-toggler-icon:after,
   nav.navbar .navbar-toggler-icon:before {
@@ -137,9 +200,11 @@ nav.navbar {
       content: '';
       z-index: 2;
       transition: all 300ms linear;
+      
   }
   nav.navbar .navbar-toggler-icon:after {
       top: 8px;
+      
   }
   nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
       transform: rotate(45deg);
